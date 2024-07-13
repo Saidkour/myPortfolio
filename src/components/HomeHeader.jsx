@@ -17,8 +17,8 @@ function HomeHeader() {
           <button
             class={`mt-7 ${
               dark
-                ? "bg-gray-300 hover:bg-gray-400 text-gray-300"
-                : "bg-gray-900 hover:bg-gray-900 text-gray-800"
+                ? "bg-gray-300 hover:bg-gray-200 text-gray-800"
+                : "bg-gray-900 hover:bg-gray-800 text-gray-300"
             }  font-bold py-2 px-4 rounded inline-flex items-center`}
           >
             <svg
