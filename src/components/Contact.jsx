@@ -2,7 +2,7 @@ import { CONTACT } from "../constants"
 
 function Contact() {
   return (
-    <div className="pt-[100px] px-5 container m-auto mb-10">
+    <div className="pt-[100px] px-5 container m-auto pb-10">
       <div className="text-center p-2">
         <h2 className="text-5xl  opacity-85">Get in Touch</h2>
       </div>
