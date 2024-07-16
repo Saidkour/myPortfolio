@@ -19,14 +19,14 @@ const NavBar = () => {
   return (
     <>
       <nav
-        className={`py-5 px-10 shadow-lg backdrop-filter backdrop-blur-lg transition-opacity opacity-100  h-[72px] fixed z-[999] top-0 left-0 w-full`}
+        className={`py-5 px-10 shadow-lg mt-2 sm:mt-0  backdrop-filter backdrop-blur-lg transition-opacity opacity-100  h-[72px] fixed z-[999] top-0 left-0 w-full `}
       >
-        <div className="container  mx-auto flex  flex-col md:flex-row justify-start relative md:justify-between ">
+        <div className="container mx-auto flex justify-between sm:flex-row relative sm:justify-between ">
           <Link to="/" className=" w-fit font-bold flex my-auto">
             <h2 className="text-3xl ">SK</h2>
           </Link>
 
-          <div className="flex min-w-[250px] justify-between p-2">
+          <div className="flex justify-evenly min-w-[250px] my-auto sm:justify-between sm:p-2">
             <a
               href="https://www.linkedin.com/in/said-kourbisse-aa0386164/"
               target="_blanck"
@@ -60,7 +60,19 @@ const NavBar = () => {
             </a>
             <span
               onClick={() => dispatch({ type: TOGGLE_DARK })}
-              className={`text-center border-l pl-4 cursor-pointer ${!dark && "border-black"}`}
+              className={`text-center hidden sm:block border-l pl-4 cursor-pointer ${!dark && "border-black"}`}
+            >
+              {dark ? (
+                <TiWeatherSunny className={`hover:opacity-30 w-6 h-6`} />
+              ) : (
+                <IoMdMoon className="hover:opacity-30 w-6 h-6" />
+              )}
+            </span>
+          </div>
+          <div className="block my-auto sm:hidden">
+          <span
+              onClick={() => dispatch({ type: TOGGLE_DARK })}
+              className={`text-center flex border-l pl-4 cursor-pointer ${!dark && "border-black"}`}
             >
               {dark ? (
                 <TiWeatherSunny className={`hover:opacity-30 w-6 h-6`} />

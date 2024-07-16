@@ -7,6 +7,8 @@ import TechnologiesSection from "./components/TechnologiesSection";
 import { useSelector } from "react-redux";
 import EducationSection from "./components/EducationSection";
 import Contact from "./components/Contact";
+import Footer from "./components/Footer";
+import Test from "./components/Test";
 function App() {
   const dark = useSelector((state) => state.dark);
   return (
@@ -35,8 +37,9 @@ function App() {
         <HomeHeader />
         <About />
         <TechnologiesSection />
-        <EducationSection/>
+        <EducationSection/> 
         <Contact/>
+        <Footer/>
       </div>
     </>
   );
