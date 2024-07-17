@@ -31,7 +31,14 @@ const TechnologiesSection = () => {
       <hr className="sm:w-[600px] pt-[50px] mt-10 m-auto" />
       <div className=" px-5 container m-auto">
         <div className="text-center p-2">
-          <h2 className="text-5xl mb-20 opacity-85">Technologies</h2>
+          <motion.h2
+            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ y: -100, opacity: 0 }}
+            transition={{ duration: 0.9, ease: "easeOut" }}
+            className="text-5xl mb-20 opacity-85"
+          >
+            Technologies
+          </motion.h2>
         </div>
         <div className="flex flex-wrap items-center justify-center gap-4">
           <motion.div

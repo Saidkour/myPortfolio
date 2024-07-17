@@ -1,4 +1,3 @@
-import { useState } from "react";
 import "./App.css";
 import About from "./components/About";
 import HomeHeader from "./components/HomeHeader";
@@ -9,6 +8,7 @@ import EducationSection from "./components/EducationSection";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import Test from "./components/Test";
+import ProjectSection from "./components/ProjecteSction";
 function App() {
   const dark = useSelector((state) => state.dark);
   return (
@@ -37,9 +37,10 @@ function App() {
         <HomeHeader />
         <About />
         <TechnologiesSection />
-        <EducationSection/> 
-        <Contact/>
-        <Footer/>
+        <ProjectSection />
+        <EducationSection />
+        <Contact />
+        <Footer />
       </div>
     </>
   );

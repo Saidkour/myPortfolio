@@ -2,6 +2,7 @@ import { FaFacebook, FaGithub, FaLinkedin } from "react-icons/fa";
 import { CONTACT } from "../constants";
 import { FaXTwitter } from "react-icons/fa6";
 import { useSelector } from "react-redux";
+import { motion } from "framer-motion";
 
 function Contact() {
   const dark = useSelector((state) => state.dark);
@@ -10,18 +11,48 @@ function Contact() {
       <hr className="sm:w-[600px] pt-[50px] mt-12 m-auto" />
       <div className=" px-5 container m-auto pb-10">
         <div className="text-center p-2">
-          <h2 className="text-5xl pb-[60px]  opacity-85">Get in Touch</h2>
+          <motion.h2
+            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ x: -200, opacity: 0 }}
+            transition={{ duration: 0.9, ease: "easeOut" }}
+            className="text-5xl pb-[60px]  opacity-85"
+          >
+            Get in Touch
+          </motion.h2>
         </div>
-        <div className="text-center tracking-tighter">
-          <p className="my-4 ">{CONTACT.address}</p>
-          <p className="my-4 ">{CONTACT.phoneNo}</p>
-          <p>
+        <div className="text-center overflow-hidden tracking-tighter">
+          <motion.p
+            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ x: 100, opacity: 0 }}
+            transition={{ duration: 0.9, ease: "easeOut" }}
+            className="my-4 "
+          >
+            {CONTACT.address}
+          </motion.p>
+          <motion.p
+            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ x: -200, opacity: 0 }}
+            transition={{ duration: 0.9, ease: "easeOut" }}
+            className="my-4 "
+          >
+            {CONTACT.phoneNo}
+          </motion.p>
+          <motion.p
+            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ x: 200, opacity: 0 }}
+            transition={{ duration: 0.9, ease: "easeOut" }}
+          >
             <a href="" className="border-b">
               {CONTACT.email}
             </a>
-          </p>
+          </motion.p>
         </div>
-        <div className="flex m-auto gap-6 justify-center mt-2 p-2">
+        <motion.div
+          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ y: 200, opacity: 0 }}
+          transition={{ duration: 0.9, ease: "easeOut" }}
+          className="flex m-auto gap-6 justify-center mt-2 p-2"
+        >
           <a
             href="https://www.linkedin.com/in/said-kourbisse-aa0386164/"
             target="_blanck"
@@ -53,7 +84,7 @@ function Contact() {
               } w-6 h-6`}
             />
           </a>
-        </div>
+        </motion.div>
       </div>
     </div>
   );

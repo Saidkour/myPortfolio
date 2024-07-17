@@ -40,7 +40,7 @@ export const Education = [
   },
 
   {
-    year: "2017",
+    year: "2016-2017",
     title: "Bachelor's Degree in Physics",
     institution: "Lycée Eljadida Tafraout",
     description: "Received a Bachelor's degree in Physics.",
