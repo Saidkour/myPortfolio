@@ -40,7 +40,7 @@ function ProjectSection() {
                 >
                   <a
                     className={`py-2 px-3 bg-blue-950  hover:border border-blue-950 hover:bg-transparent ${
-                      dark ? "text-white" : "hover:text-black"
+                      dark ? "text-white" : "text-white hover:text-black"
                     }`}
                     href="#"
                   >
@@ -48,7 +48,7 @@ function ProjectSection() {
                   </a>
                   <a
                     className={`py-2 px-3 bg-blue-950 ml-4  hover:border border-blue-950 hover:bg-transparent ${
-                      dark ? "text-white" : "hover:text-black"
+                      dark ? "text-white" : "text-white hover:text-black"
                     }`}
                     href="#"
                   >
