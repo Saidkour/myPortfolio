@@ -10,7 +10,7 @@ function EducationSection() {
         <div className="text-center p-2">
           <motion.h2
             whileInView={{ opacity: 1, y: 0 }}
-            initial={{ y: -100, opacity: 0 }}
+            initial={{ y: -50, opacity: 0 }}
             transition={{ duration: 0.9, ease: "easeOut" }}
             className="text-5xl mb-20  opacity-85"
           >
