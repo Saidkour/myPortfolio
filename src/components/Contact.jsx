@@ -8,7 +8,7 @@ function Contact() {
   const dark = useSelector((state) => state.dark);
   return (
     <div className="py-[100px]">
-      <hr className="sm:w-[600px] pt-[50px] mt-12 m-auto" />
+      {/* <hr className="sm:w-[600px] pt-[50px] mt-12 m-auto" /> */}
       <div className=" px-5 container m-auto pb-10">
         <div className="text-center p-2">
           <motion.h2

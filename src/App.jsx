@@ -7,10 +7,11 @@ import { useSelector } from "react-redux";
 import EducationSection from "./components/EducationSection";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
-import Test from "./components/Test";
 import ProjectSection from "./components/ProjecteSction";
+import AppParticals from "./components/AppParticals";
 function App() {
   const dark = useSelector((state) => state.dark);
+
   return (
     <>
       <div
@@ -34,7 +35,10 @@ function App() {
           </div>
         )}
         <Navbar />
-        <HomeHeader />
+        <div className="relative overflow-hidden">
+          <AppParticals />
+          <HomeHeader />
+        </div>
         <About />
         <TechnologiesSection />
         <ProjectSection />

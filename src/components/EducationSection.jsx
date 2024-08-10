@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 function EducationSection() {
   return (
     <>
-      <hr className="sm:w-[600px] pt-[100px] mt-20 m-auto" />
+      {/* <hr className="sm:w-[600px] pt-[100px] mt-20 m-auto" /> */}
       <div className=" px-5 overflow-hidden container m-auto">
         <div className="text-center p-2">
           <motion.h2

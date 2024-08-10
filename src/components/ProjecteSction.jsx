@@ -7,7 +7,7 @@ function ProjectSection() {
   const dark = useSelector((state) => state.dark);
   return (
     <>
-      <hr className="sm:w-[600px] pt-[50px] mt-20 m-auto" />
+      {/* <hr className="sm:w-[600px] pt-[50px] mt-20 m-auto" /> */}
       <div className=" px-5 container overflow-hidden m-auto">
         <div className="text-center p-2">
           <motion.h2

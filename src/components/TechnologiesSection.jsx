@@ -1,8 +1,14 @@
 import { motion } from "framer-motion";
 import {
+  SiCss3,
+  SiDocker,
   SiExpress,
+  SiHtml5,
+  SiJavascript,
+  SiJira,
   SiLaravel,
   SiMongodb,
+  SiMysql,
   SiNodedotjs,
   SiPhp,
   SiPostman,
@@ -10,7 +16,6 @@ import {
   SiTailwindcss,
 } from "react-icons/si";
 import { useSelector } from "react-redux";
-
 const TechnologiesSection = () => {
   const dark = useSelector((state) => state.dark);
 
@@ -28,7 +33,7 @@ const TechnologiesSection = () => {
   });
   return (
     <div div className="my-5">
-      <hr className="sm:w-[600px] pt-[50px] mt-10 m-auto" />
+      {/* <hr className="sm:w-[600px] pt-[50px] mt-10 m-auto" /> */}
       <div className=" px-5 container m-auto">
         <div className="text-center p-2">
           <motion.h2
@@ -41,6 +46,36 @@ const TechnologiesSection = () => {
           </motion.h2>
         </div>
         <div className="flex flex-wrap items-center justify-center gap-4">
+        <motion.div
+            variants={iconVariants(2.5)}
+            initial="initial"
+            animate="animate"
+            className={`rounded-2xl border-4 ${
+              dark ? "border-neutral-800" : "border-neutral-300"
+            } p-4`}
+          >
+            <SiHtml5 className="text-7xl text-red-500" />
+          </motion.div>
+          <motion.div
+            variants={iconVariants(2.5)}
+            initial="initial"
+            animate="animate"
+            className={`rounded-2xl border-4 ${
+              dark ? "border-neutral-800" : "border-neutral-300"
+            } p-4`}
+          >
+            <SiCss3 className="text-7xl text-blue-500" />
+          </motion.div>
+          <motion.div
+            variants={iconVariants(2.5)}
+            initial="initial"
+            animate="animate"
+            className={`rounded-2xl border-4 ${
+              dark ? "border-neutral-800" : "border-neutral-300"
+            } p-4`}
+          >
+            <SiJavascript className="text-7xl text-yellow-500" />
+          </motion.div>
           <motion.div
             variants={iconVariants(2.5)}
             initial="initial"
@@ -79,7 +114,17 @@ const TechnologiesSection = () => {
               dark ? "border-neutral-800" : "border-neutral-300"
             } p-4`}
           >
-            <SiNodedotjs className="text-7xl text-green-500" />
+            <SiNodedotjs className="text-7xl text-green-600" />
+          </motion.div>
+          <motion.div
+            variants={iconVariants(4)}
+            initial="initial"
+            animate="animate"
+            className={`rounded-2xl border-4 ${
+              dark ? "border-neutral-800" : "border-neutral-300"
+            } p-4`}
+          >
+            <SiTailwindcss className="text-7xl text-blue-500" />
           </motion.div>
           <motion.div
             variants={iconVariants(2.5)}
@@ -102,6 +147,16 @@ const TechnologiesSection = () => {
             <SiLaravel className="text-7xl text-red-500" />
           </motion.div>
           <motion.div
+            variants={iconVariants(4)}
+            initial="initial"
+            animate="animate"
+            className={`rounded-2xl border-4 ${
+              dark ? "border-neutral-800" : "border-neutral-300"
+            } p-4`}
+          >
+            <SiMysql className="text-7xl text-blue-500" />
+          </motion.div>
+          <motion.div
             variants={iconVariants(2.5)}
             initial="initial"
             animate="animate"
@@ -119,8 +174,20 @@ const TechnologiesSection = () => {
               dark ? "border-neutral-800" : "border-neutral-300"
             } p-4`}
           >
-            <SiTailwindcss className="text-7xl text-blue-500" />
+            <SiJira className="text-7xl text-blue-500" />
           </motion.div>
+          <motion.div
+            variants={iconVariants(4)}
+            initial="initial"
+            animate="animate"
+            className={`rounded-2xl border-4 ${
+              dark ? "border-neutral-800" : "border-neutral-300"
+            } p-4`}
+          >
+            <SiDocker className="text-7xl text-blue-500" />
+          </motion.div>
+          
+          
         </div>
       </div>
     </div>

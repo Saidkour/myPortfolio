@@ -6,6 +6,18 @@
 :root{
   font-family: "Inter", sans-serif;
 }
+#particles-js {
+  position: relative;  /* Adjust based on your layout needs */
+  z-index: 0;  /* Ensure it appears behind other content */
+}
+#tsparticles {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
 /* .animated-gradient-text {
   background-image: linear-gradient(to right, fuchsia, #6495ed, #800080);
   -webkit-background-clip: text;
