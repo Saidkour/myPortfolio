@@ -34,9 +34,9 @@ function App() {
             <div className="absolute bottom-0 transition-all  duration-200 ease-out left-0 right-0 top-0 bg-[radial-gradient(circle_800px_at_100%_200px,#d5c5ff,transparent)]"></div>
           </div>
         )}
-        <Navbar />
-        <div className="relative overflow-hidden">
+        <div className="relative">
           <AppParticals />
+          <Navbar />
           <HomeHeader />
         </div>
         <About />

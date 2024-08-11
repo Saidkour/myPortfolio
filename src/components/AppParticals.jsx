@@ -1,17 +1,11 @@
-import { useCallback } from "react";
+import React, { useCallback } from "react";
 import Particles from "react-particles";
 import { useSelector } from "react-redux";
-//import { loadFull } from "tsparticles"; // if you are going to use `loadFull`, install the "tsparticles" package too.
-import { loadSlim } from "tsparticles-slim"; // if you are going to use `loadSlim`, install the "tsparticles-slim" package too.
+import { loadSlim } from "tsparticles-slim";
 
 const AppParticals = () => {
   const dark = useSelector((state) => state.dark);
   const particlesInit = useCallback(async (engine) => {
-    // console.log(engine);
-    // you can initiate the tsParticles instance (engine) here, adding custom shapes or presets
-    // this loads the tsparticles package bundle, it's the easiest method for getting everything ready
-    // starting from v2 you can add only the features you need reducing the bundle size
-    //await loadFull(engine);
     await loadSlim(engine);
   }, []);
 
@@ -21,8 +15,10 @@ const AppParticals = () => {
 
   return (
     <Particles
+      id="tsparticles"
       init={particlesInit}
       loaded={particlesLoaded}
+      className="absolute w-full h-full top-0 left-0 z-[-1] max-w-full"
       options={{
         background: {
           color: {
@@ -30,6 +26,7 @@ const AppParticals = () => {
           },
         },
         fpsLimit: 120,
+        fullScreen: { enable: false },
         interactivity: {
           events: {
             onClick: {
@@ -38,7 +35,7 @@ const AppParticals = () => {
             },
             onHover: {
               enable: true,
-              mode: "repulse",
+              mode: "grab",
             },
             resize: true,
           },
@@ -51,6 +48,7 @@ const AppParticals = () => {
               duration: 0.4,
             },
           },
+          fullScreen: { enable: false },
         },
         particles: {
           color: {
@@ -97,3 +95,5 @@ const AppParticals = () => {
 };
 
 export default AppParticals;
+
+
