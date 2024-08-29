@@ -115,7 +115,7 @@ export const PROJECTS = [
     title: "School Registration Management",
     image: project4,
     description:
-      "A platform for creating and publishing blog posts, with features like rich text editing, commenting, and user profiles.",
+      "Designed and implemented a comprehensive school management system with CRUD functionalities for students and professors. Includes user account management features such as login, registration, account settings, and password changes. Focused on creating an efficient and user-friendly platform for managing educational records.",
     technologies: ["HTML", "TailwindCSS", "React.js", "Laravel", "mySQL"],
     demo: false,
     repo: "https://github.com/Saidkour/projetschools",

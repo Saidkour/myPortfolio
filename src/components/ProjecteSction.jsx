@@ -40,7 +40,7 @@ function ProjectSection() {
                   className="mt-7  flex text-center"
                 >
                   <a
-                    className={`py-2 px-3 bg-primary  ml-4  border border-primary hover:bg-transparent ${
+                    className={`py-2 px-3 ${project.demo?"cursor-pointer":"cursor-none"} bg-primary  ml-4  border border-primary hover:bg-transparent ${
                       dark ? "text-white hover:text-primary" : "text-white hover:text-primary"
                     }`}
                     href={`${project.demo ? project.demo : "#"}`}
