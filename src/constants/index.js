@@ -1,11 +1,12 @@
-import project1 from "../assets/projects/project-1.jpg";
-import project2 from "../assets/projects/project-2.jpg";
-import project3 from "../assets/projects/project-3.jpg";
-import project4 from "../assets/projects/project-4.jpg";
+import project1 from "../assets/projects/homeheaderyoushop.png";
+import project2 from "../assets/projects/piemedical.png";
+import project3 from "../assets/projects/prtfolioimg.png";
+import project4 from "../assets/projects/edusysimg.png";
+import project5 from "../assets/projects/movieapimg.png";
 
 export const HERO_CONTENT = `Hi! 👋 I’m a passionate Full Stack Developer . My goal is to create innovative solutions that drive business growth 💡 while delivering exceptional user experiences. I’m motivated, flexible, and ready to bring your ideas to life! 🚀`;
 
-export const ABOUT_TEXT = `I am a dedicated and versatile full stack developer with a passion for creating efficient and user-friendly web applications. With 5 years of professional experience, I have worked with a variety of technologies, including React, Next.js, Node.js, MySQL, PostgreSQL, and MongoDB. My journey in web development began with a deep curiosity for how things work, and it has evolved into a career where I continuously strive to learn and adapt to new challenges. I thrive in collaborative environments and enjoy solving complex problems to deliver high-quality solutions. Outside of coding, I enjoy staying active, exploring new technologies, and contributing to open-source projects.`;
+export const ABOUT_TEXT = `As a passionate and versatile full-stack developer, I focus on creating efficient and user-friendly web applications. My expertise includes working with technologies like React.js, Node.js, Express, MongoDB, Laravel, and styling with CSS and Tailwind. I am skilled in fixing bugs and managing errors, ensuring smooth and reliable performance in my projects. While I have learned Agile methodologies, including Scrum and JIRA, during my studies, I am eager to apply this knowledge in a professional setting. My journey in web development has been driven by a passion for problem-solving and a commitment to delivering high-quality solutions. Beyond coding, I stay active, explore new technologies, and contribute to open-source projects.`;
 export const Education = [
   {
     year: "2022-2024",
@@ -14,7 +15,7 @@ export const Education = [
     description:
       "Successfully completed a diploma program in Digital Development at OFPPT.",
   },
-   // {
+  // {
   //   year: "2022",
   //   title:
   //     "High School Diploma (Baccalauréat) in Life Sciences and Earth Sciences (SVT)",
@@ -45,7 +46,6 @@ export const Education = [
     institution: "Lycée Eljadida Tafraout",
     description: "Received a Bachelor's degree in Physics.",
   },
- 
 ];
 export const EXPERIENCES = [
   {
@@ -83,29 +83,60 @@ export const PROJECTS = [
     title: "E-Commerce Website",
     image: project1,
     description:
-      "A fully functional e-commerce website with features like product listing, shopping cart, and user authentication.",
-    technologies: ["HTML", "CSS", "React", "Node.js", "MongoDB"],
+      "A fully functional e-commerce website with features like product listing, shopping cart,",
+    technologies: [
+      "HTML",
+      "TailwindCSS",
+      "React",
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+    ],
+    demo: false,
+    repo: "https://github.com/Saidkour/you-shop-pro",
   },
   {
-    title: "Task Management App",
+    title: "Hospital Vaccination Management System",
     image: project2,
     description:
-      "An application for managing tasks and projects, with features such as task creation, assignment, and progress tracking.",
-    technologies: ["HTML", "CSS", "Angular", "Firebase"],
+      "An integrated platform that streamlines the administration and monitoring of vaccinations in a hospital setting, enhancing efficiency and patient care.",
+    technologies: [
+      "HTML",
+      "TailwindCSS",
+      "React",
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+    ],
+    demo: false,
+    repo: "https://github.com/Saidkour/pie_medical",
+  },
+  {
+    title: "School Registration Management",
+    image: project4,
+    description:
+      "A platform for creating and publishing blog posts, with features like rich text editing, commenting, and user profiles.",
+    technologies: ["HTML", "TailwindCSS", "React.js", "Laravel", "mySQL"],
+    demo: false,
+    repo: "https://github.com/Saidkour/projetschools",
+  },
+  {
+    title: "Exploring and Viewing Movie Details",
+    image: project5,
+    description:
+      "A platform for discovering and exploring movies, featuring an intuitive landing page where users can browse through a curated list of films. Each movie has its own detailed page, populated with data fetched from an external API, providing rich information such as synopsis, cast, release date, and ratings. This project highlights my expertise in API integration, dynamic content rendering, and user-friendly interface design",
+    technologies: ["HTML", "React", "TailwindCSS"],
+    demo: "https://kourbisse-cima.netlify.app/",
+    repo: "https://github.com/Saidkour/KourbisseCima",
   },
   {
     title: "Portfolio Website",
     image: project3,
     description:
       "A personal portfolio website showcasing projects, skills, and contact information.",
-    technologies: ["HTML", "CSS", "React", "Bootstrap"],
-  },
-  {
-    title: "Blogging Platform",
-    image: project4,
-    description:
-      "A platform for creating and publishing blog posts, with features like rich text editing, commenting, and user profiles.",
-    technologies: ["HTML", "CSS", "Vue.js", "Express", "mySQL"],
+    technologies: ["HTML", "React", "TailwindCSS"],
+    demo: "https://saidkourbisse.netlify.app/",
+    repo: "https://github.com/Saidkour/myPortfolio",
   },
 ];
 

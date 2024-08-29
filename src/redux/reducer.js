@@ -1,7 +1,7 @@
 import { TOGGLE_DARK } from "./actionType";
 
 const initialState = {
-    dark: true
+    dark: false
 };
 
 const reducer = (state = initialState, action) => {

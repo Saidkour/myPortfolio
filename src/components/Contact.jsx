@@ -59,28 +59,28 @@ function Contact() {
           >
             <FaLinkedin
               className={`${
-                !dark ? "hover:opacity-50" : "hover:opacity-50"
+                !dark ? "hover:text-primary" : "hover:text-primary"
               } w-6 h-6`}
             />
           </a>
           <a href="https://www.github.com/saidkour" target="_blanck">
             <FaGithub
               className={`${
-                !dark ? "hover:opacity-50" : "hover:opacity-50"
+                !dark ? "hover:text-primary" : "hover:text-primary"
               } w-6 h-6`}
             />
           </a>
           <a href="https://x.com/SKourbisse1" target="_blanck">
             <FaXTwitter
               className={`${
-                !dark ? "hover:opacity-50" : "hover:opacity-50"
+                !dark ? "hover:text-primary" : "hover:text-primary"
               } w-6 h-6`}
             />
           </a>
           <a href="https://www.facebook.com" target="_blanck">
             <FaFacebook
               className={`${
-                !dark ? "hover:opacity-50" : "hover:opacity-50"
+                !dark ? "hover:text-primary" : "hover:text-primary"
               } w-6 h-6`}
             />
           </a>

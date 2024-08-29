@@ -29,21 +29,18 @@ function HomeHeader() {
           <motion.h3
             initial={{ x: -600 }}
             animate={{ x: 0, transition: { duration: 0.8, ease: "easeInOut" } }}
-            className="bg-gradient-to-r flex  from-pink-300 via-slate-500 to-purple-500 bg-clip-text text-4xl traking-tight text-transparent transition-all animate-bg duration-75 ease-out animate-pulse"
+            className="bg-gradient-to-r flex  from-pink-600 via-slate-400 to-primary bg-clip-text text-4xl traking-tight text-transparent transition-all animate-bg duration-75 ease-out animate-pulse"
           >
             <TypingAnimation />
           </motion.h3>
-          <motion.button
+         <div className="text-center md:text-left ">
+         <motion.button
             initial={{ y: 600 }}
             animate={{
               y: 0,
               transition: { duration: 1, ease: "easeOut" },
             }}
-            className={`mt-7 ${
-              dark
-                ? "bg-gray-300 hover:bg-gray-200 text-gray-800"
-                : "bg-gray-900 hover:bg-gray-800 text-gray-300"
-            }  font-bold py-2 px-4 rounded inline-flex items-center`}
+            className="font-bold py-2 px-4 rounded-[50px] inline-flex bg-primary hover:bg-transparent border border-primary items-center mt-7"
           >
             <svg
               className="fill-current w-4 h-4 mr-2"
@@ -63,18 +60,31 @@ function HomeHeader() {
               </a>
             </span>
           </motion.button>
-          {/* <button
-            className={`border rounded-md   mt-7 p-2 ${
-              dark ? "border-white" : "border-black"
-            }`}
+          <motion.button
+            initial={{ y: 600 }}
+            animate={{
+              y: 0,
+              transition: { duration: 1, ease: "easeOut" },
+            }}
+            className="font-bold ml-4 py-2 px-4 rounded-[50px] inline-flex bg-primary hover:bg-transparent border border-primary items-center mt-7"
           >
-            <a
-              href="../constants/said_kourbisseNeww.pdf"
-              download="said_kourbisseNeww.pdf"
+            <svg
+              className="fill-current w-4 h-4 mr-2"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 20 20"
             >
-              Download my CV
-            </a>
-          </button> */}
+              <path d="M13.5108 5.85343L17.5158 1.73642L19.8404 4.11701L15.6393 8.12199H21.5488V11.4268H15.6113L19.8404 15.5345L17.5158 17.8684L11.7744 12.099L6.03299 17.8684L3.70842 15.5438L7.93745 11.4361H2V8.12199H7.90944L3.70842 4.11701L6.03299 1.73642L10.038 5.85343V0H13.5108V5.85343ZM10.038 16.16H13.5108V24.0019H10.038V16.16Z" />
+            </svg>
+            <span>
+              <a
+                href="https://linktr.ee/saidkourbisse"
+                target="_blank"
+              >
+                Get in touch
+              </a>
+            </span>
+          </motion.button>
+         </div>
         </div>
         <div className="flex justify-center m-auto">
           <div className="md:rounded-r-[40px]  overflow-hidden">

@@ -2,13 +2,14 @@ import React from "react";
 import { PROJECTS } from "../constants";
 import { useSelector } from "react-redux";
 import { motion } from "framer-motion";
+import { SiGithub } from "react-icons/si";
 
 function ProjectSection() {
   const dark = useSelector((state) => state.dark);
   return (
     <>
       {/* <hr className="sm:w-[600px] pt-[50px] mt-20 m-auto" /> */}
-      <div className=" px-5 container overflow-hidden m-auto">
+      <div className=" px-5 py-4 container overflow-hidden m-auto">
         <div className="text-center p-2">
           <motion.h2
             whileInView={{ opacity: 1, y: 0 }}
@@ -36,23 +37,26 @@ function ProjectSection() {
                   whileInView={{ opacity: 1, x: 0 }}
                   initial={{ x: 100, opacity: 0 }}
                   transition={{ duration: 0.9, ease: "easeOut" }}
-                  className="mt-7  text-center"
+                  className="mt-7  flex text-center"
                 >
                   <a
-                    className={`py-2 px-3 bg-blue-950  hover:border border-blue-950 hover:bg-transparent ${
-                      dark ? "text-white" : "text-white hover:text-black"
+                    className={`py-2 px-3 bg-primary  ml-4  border border-primary hover:bg-transparent ${
+                      dark ? "text-white hover:text-primary" : "text-white hover:text-primary"
                     }`}
-                    href="#"
+                    href={`${project.demo ? project.demo : "#"}`}
+                    target="_blanck"
                   >
-                    demo
+                    Demo
                   </a>
                   <a
-                    className={`py-2 px-3 bg-blue-950 ml-4  hover:border border-blue-950 hover:bg-transparent ${
-                      dark ? "text-white" : "text-white hover:text-black"
+                    className={`py-2 px-3 bg-primary flex max-w-52  ml-4  hover:border border-primary hover:bg-transparent ${
+                      dark ? "text-white hover:text-primary" : "text-white hover:text-primary"
                     }`}
-                    href="#"
+                    href={`${project.repo ? project.repo : "#"}`}
+                    target="_blanck"
                   >
-                    code
+                    Code 
+                    <SiGithub className="m-auto ml-2"/>
                   </a>
                 </motion.p>
               </div>
@@ -68,14 +72,14 @@ function ProjectSection() {
                 <h4 className="text-xl font-meduim opacity-70 mb-4">
                   {project.description}
                 </h4>
-                <p className=" font-semi-bold opacity-75">
+                <p className="font-semi-bold grid grid-cols-3 sm:grid-cols-5 opacity-75">
                   {project.technologies.map((tech, index) => (
                     <span
                       key={index}
-                      className={`mr-2 p-2 border  ${
+                      className={`mr-2 p-2 border  grid-cols-1 mt-1  ${
                         dark
-                          ? "text-blue-900 hover:text-black hover:bg-blue-950 border-blue-950"
-                          : "text-blue-950 border-blue-950 hover:bg-blue-950 hover:text-blue-100"
+                          ? "text-primary hover:text-black hover:bg-primary border-primary"
+                          : "text-primary border-primary hover:bg-primary hover:text-blue-100"
                       } `}
                     >
                       {tech}
