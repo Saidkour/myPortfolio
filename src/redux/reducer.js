@@ -1,7 +1,8 @@
-import { TOGGLE_DARK } from "./actionType";
+import { TOGGLE_DARK, TOGGLE_LANG } from "./actionType";
 
 const initialState = {
-    dark: false
+    dark: true,
+    lang: "en"
 };
 
 const reducer = (state = initialState, action) => {
@@ -10,6 +11,11 @@ const reducer = (state = initialState, action) => {
             return {
                 ...state,
                 dark: !state.dark
+            };
+        case TOGGLE_LANG:
+            return {
+                ...state,
+                lang: state.lang === "en" ? "fr" : "en"
             };
         default:
             return state;

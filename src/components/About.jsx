@@ -1,9 +1,12 @@
 import React from "react";
 import aboutImg from "../assets/about.jpg";
-import { ABOUT_TEXT } from "../constants/index";
+import { ABOUT_TEXT, ABOUT_TEXT_FR } from "../constants/index";
 import { motion } from "framer-motion";
+import { useSelector } from "react-redux";
 
 function About() {
+  const lang = useSelector((state) => state.lang);
+  const ABOUT_TE = lang === "en" ? ABOUT_TEXT : ABOUT_TEXT_FR;
   return (
     <>
       {/* <hr className="sm:w-[600px] pt-[50px] mt-12 m-auto" /> */}
@@ -38,12 +41,7 @@ function About() {
             className="p-4 "
           >
             <p className="flex text-justify  backdrop-filter backdrop-blur-lg">
-              {/* Welcome to my portfolio! I am a passionate web developer with
-            experience in JavaScript and React. I love creating beautiful and
-            functional websites that provide great user experiences. Feel free
-            to explore my projects and get in touch with me if you have any
-            questions or opportunities for collaboration. */}
-              {ABOUT_TEXT}
+              {ABOUT_TE}
             </p>
           </motion.div>
         </div>

@@ -3,17 +3,22 @@ import {
   SiCss3,
   SiDocker,
   SiExpress,
+  SiGit,
   SiHtml5,
   SiJavascript,
   SiJira,
   SiLaravel,
   SiMongodb,
   SiMysql,
+  SiNextdotjs,
   SiNodedotjs,
   SiPhp,
   SiPostman,
+  SiPython,
   SiReact,
+  SiRedux,
   SiTailwindcss,
+  SiTypescript,
 } from "react-icons/si";
 import { useSelector } from "react-redux";
 const TechnologiesSection = () => {
@@ -84,6 +89,16 @@ const TechnologiesSection = () => {
               dark ? "border-neutral-800" : "border-neutral-300"
             } p-4`}
           >
+            <SiTypescript className="text-7xl text-blue-500" />
+          </motion.div>
+          <motion.div
+            variants={iconVariants(2.5)}
+            initial="initial"
+            animate="animate"
+            className={`rounded-2xl border-4 ${
+              dark ? "border-neutral-800" : "border-neutral-300"
+            } p-4`}
+          >
             <SiMongodb className="text-7xl text-green-500" />
           </motion.div>
           <motion.div
@@ -95,6 +110,16 @@ const TechnologiesSection = () => {
             } p-4`}
           >
             <SiReact className="text-7xl text-blue-500" />
+          </motion.div>
+          <motion.div
+            variants={iconVariants(4)}
+            initial="initial"
+            animate="animate"
+            className={`rounded-2xl border-4 ${
+              dark ? "border-neutral-800" : "border-neutral-300"
+            } p-4`}
+          >
+            <SiRedux className="text-7xl text-blue-500" />
           </motion.div>
           <motion.div
             variants={iconVariants(2.5)}
@@ -115,6 +140,16 @@ const TechnologiesSection = () => {
             } p-4`}
           >
             <SiNodedotjs className="text-7xl text-green-600" />
+          </motion.div>
+          <motion.div
+            variants={iconVariants(4)}
+            initial="initial"
+            animate="animate"
+            className={`rounded-2xl border-4 ${
+              dark ? "border-neutral-800" : "border-neutral-300"
+            } p-4`}
+          >
+            <SiNextdotjs className="text-7xl text-white-600" />
           </motion.div>
           <motion.div
             variants={iconVariants(4)}
@@ -157,6 +192,16 @@ const TechnologiesSection = () => {
             <SiMysql className="text-7xl text-blue-500" />
           </motion.div>
           <motion.div
+            variants={iconVariants(4)}
+            initial="initial"
+            animate="animate"
+            className={`rounded-2xl border-4 ${
+              dark ? "border-neutral-800" : "border-neutral-300"
+            } p-4`}
+          >
+            <SiPython className="text-7xl text-blue-500" />
+          </motion.div>
+          <motion.div
             variants={iconVariants(2.5)}
             initial="initial"
             animate="animate"
@@ -165,6 +210,16 @@ const TechnologiesSection = () => {
             } p-4`}
           >
             <SiPostman className="text-7xl text-yellow-900" />
+          </motion.div>
+          <motion.div
+            variants={iconVariants(2.5)}
+            initial="initial"
+            animate="animate"
+            className={`rounded-2xl border-4 ${
+              dark ? "border-neutral-800" : "border-neutral-300"
+            } p-4`}
+          >
+            <SiGit className="text-7xl text-red-500" />
           </motion.div>
           <motion.div
             variants={iconVariants(4)}

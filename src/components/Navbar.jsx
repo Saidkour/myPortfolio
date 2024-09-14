@@ -11,10 +11,11 @@ import { IoMdMoon } from "react-icons/io";
 import { TiWeatherSunny } from "react-icons/ti";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
-import { TOGGLE_DARK } from "../redux/actionType";
+import { TOGGLE_DARK, TOGGLE_LANG } from "../redux/actionType";
 
 const NavBar = () => {
   const dark = useSelector((state) => state.dark);
+  const lang = useSelector((state) => state.lang);
   const dispatch = useDispatch();
   return (
     <>
@@ -31,28 +32,22 @@ const NavBar = () => {
               href="https://www.linkedin.com/in/said-kourbisse-aa0386164/"
               target="_blanck"
             >
-              <FaLinkedin
-                className={`hover:text-primary w-6 h-6`}
-              />
+              <FaLinkedin className={`hover:text-primary w-6 h-6`} />
             </a>
             <a href="https://www.github.com/saidkour" target="_blanck">
-              <FaGithub
-                className={`hover:text-primary w-6 h-6`}
-              />
+              <FaGithub className={`hover:text-primary w-6 h-6`} />
             </a>
             <a href="https://x.com/SKourbisse1" target="_blanck">
-              <FaXTwitter
-                className={`hover:text-primary w-6 h-6`}
-              />
+              <FaXTwitter className={`hover:text-primary w-6 h-6`} />
             </a>
             <a href="https://www.facebook.com" target="_blanck">
-              <FaFacebook
-                className={` w-6 h-6 hover:text-primary`}
-              />
+              <FaFacebook className={` w-6 h-6 hover:text-primary`} />
             </a>
             <span
               onClick={() => dispatch({ type: TOGGLE_DARK })}
-              className={`text-center hidden sm:block border-l pl-4 cursor-pointer ${!dark && "border-black"}`}
+              className={`text-center hidden sm:block border-l pl-4 cursor-pointer ${
+                !dark && "border-black"
+              }`}
             >
               {dark ? (
                 <TiWeatherSunny className={`hover:text-primary w-6 h-6`} />
@@ -60,17 +55,31 @@ const NavBar = () => {
                 <IoMdMoon className="hover:text-primary w-6 h-6" />
               )}
             </span>
+            <span
+              onClick={() => dispatch({ type: TOGGLE_LANG })}
+              className="text-red hidden sm:block cursor-pointer hover:text-primary"
+            >
+              {lang === "en" ? "EN" : "FR"}
+            </span>
           </div>
-          <div className="block my-auto sm:hidden">
-          <span
+          <div className="flex my-auto sm:hidden">
+            <span
               onClick={() => dispatch({ type: TOGGLE_DARK })}
-              className={`text-center flex border-l pl-4 cursor-pointer ${!dark && "border-black"}`}
+              className={`text-center flex border-l pl-4 cursor-pointer ${
+                !dark && "border-black"
+              }`}
             >
               {dark ? (
-                <TiWeatherSunny className={`hover:opacity-30 w-6 h-6`} />
+                <TiWeatherSunny className={` w-6 h-6 hover:text-primary`} />
               ) : (
-                <IoMdMoon className="hover:opacity-30 w-6 h-6" />
+                <IoMdMoon className=" w-6 h-6 hover:text-primary" />
               )}
+            </span>
+            <span
+              onClick={() => dispatch({ type: TOGGLE_LANG })}
+              className="cursor-pointer ml-2 block my-auto sm:hidden hover:text-primary"
+            >
+              {lang === "en" ? "EN" : "FR"}
             </span>
           </div>
         </div>

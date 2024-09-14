@@ -9,6 +9,7 @@ import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import ProjectSection from "./components/ProjecteSction";
 import AppParticals from "./components/AppParticals";
+import ExperienceSection from "./components/ExperienceSection";
 function App() {
   const dark = useSelector((state) => state.dark);
 
@@ -42,6 +43,7 @@ function App() {
         <About />
         <TechnologiesSection />
         <ProjectSection />
+        <ExperienceSection/>
         <EducationSection />
         <Contact />
         <Footer />

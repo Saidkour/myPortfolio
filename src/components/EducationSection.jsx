@@ -1,8 +1,11 @@
 import React from "react";
-import { Education } from "../constants";
+import { Education, Education_FR } from "../constants";
 import { motion } from "framer-motion";
+import { useSelector } from "react-redux";
 
 function EducationSection() {
+  const lang=useSelector((state)=>state.lang)
+  const Edu = lang === "en" ? Education : Education_FR;
   return (
     <>
       {/* <hr className="sm:w-[600px] pt-[100px] mt-20 m-auto" /> */}
@@ -18,7 +21,7 @@ function EducationSection() {
           </motion.h2>
         </div>
         <div className="pt-5">
-          {Education.map((edu, index) => (
+          {Edu.map((edu, index) => (
             <div key={index} className="grid grid-cols-1  sm:grid-cols-6  p-4">
               <motion.div
                 whileInView={{ opacity: 1, x: 0 }}
