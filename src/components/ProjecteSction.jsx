@@ -33,7 +33,10 @@ function ProjectSection() {
                   whileInView={{ opacity: 1, x: 0 }}
                   initial={{ x: -200, opacity: 0 }}
                   transition={{ duration: 0.9, ease: "easeOut" }}
-                  className=""
+                  className="rounded-md"
+                  width={360}
+                  height={160}
+                  loading="lazy"
                   src={project.image}
                   alt={project.title}
                 />

@@ -6,8 +6,11 @@ export default {
       colors: {
         // primary: "#6B46C1",
         primary: "#845ec2",
+        // primary: "#0081cf",
       },
     },
   },
-  plugins: [],
+  plugins: [
+    
+  ],
 };

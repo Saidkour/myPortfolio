@@ -1,4 +1,3 @@
-import { motion } from "framer-motion";
 import {
   SiCss3,
   SiDocker,
@@ -20,10 +19,10 @@ import {
   SiTailwindcss,
   SiTypescript,
 } from "react-icons/si";
+import { motion } from "framer-motion";
 import { useSelector } from "react-redux";
 const TechnologiesSection = () => {
   const dark = useSelector((state) => state.dark);
-
   const iconVariants = (duration) => ({
     initial: { y: -10 },
     animate: {
@@ -37,8 +36,7 @@ const TechnologiesSection = () => {
     },
   });
   return (
-    <div div className="my-5">
-      {/* <hr className="sm:w-[600px] pt-[50px] mt-10 m-auto" /> */}
+    <div className="my-5">
       <div className=" px-5 container m-auto">
         <div className="text-center p-2">
           <motion.h2
@@ -51,7 +49,7 @@ const TechnologiesSection = () => {
           </motion.h2>
         </div>
         <div className="flex flex-wrap items-center justify-center gap-4">
-        <motion.div
+          <motion.div
             variants={iconVariants(2.5)}
             initial="initial"
             animate="animate"
@@ -119,7 +117,7 @@ const TechnologiesSection = () => {
               dark ? "border-neutral-800" : "border-neutral-300"
             } p-4`}
           >
-            <SiRedux className="text-7xl text-blue-500" />
+            <SiRedux className="text-7xl text-primary" />
           </motion.div>
           <motion.div
             variants={iconVariants(2.5)}
@@ -241,8 +239,6 @@ const TechnologiesSection = () => {
           >
             <SiDocker className="text-7xl text-blue-500" />
           </motion.div>
-          
-          
         </div>
       </div>
     </div>

@@ -1,8 +1,8 @@
-import project1 from "../assets/projects/homeheaderyoushop.png";
-import project2 from "../assets/projects/piemedical.png";
-import project3 from "../assets/projects/prtfolioimg.png";
-import project4 from "../assets/projects/edusysimg.png";
-import project5 from "../assets/projects/movieapimg.png";
+import project1 from "../assets/projects/homeheaderyoushop.webp";
+import project2 from "../assets/projects/piemedical.webp";
+import project3 from "../assets/projects/prtfolioimg.webp";
+import project4 from "../assets/projects/edusysimg.webp";
+import project5 from "../assets/projects/movieapimg.webp";
 
 export const HERO_CONTENT = `Hi! 👋 I’m a passionate Full Stack Developer . My goal is to create innovative solutions that drive business growth 💡 while delivering exceptional user experiences. I’m motivated, flexible, and ready to bring your ideas to life! 🚀`;
 export const HERO_CONTENT_FR = `Salut! 👋 Je suis un développeur Full Stack passionné. Mon objectif est de créer des solutions innovantes qui stimulent la croissance des entreprises 💡 tout en offrant des expériences utilisateur exceptionnelles. Je suis motivé, flexible et prêt à donner vie à vos idées! 🚀`;
@@ -84,7 +84,8 @@ export const EXPERIENCE = [
   //   technologies: ["Ruby", "Rails", "PHP", "Sqlite"],
   // },
 ];
-export const EXPERIENCE_FR= [{
+export const EXPERIENCE_FR = [
+  {
     year: "2024",
     role: "Développeur Full Stack (Stage)",
     company: "Centre de Santé - Tafraout",
@@ -134,7 +135,7 @@ export const PROJECTS = [
       "Express.js",
       "MongoDB",
     ],
-    demo: false,
+    demo: "https://you-shop-ecom.netlify.app/",
     repo: "https://github.com/Saidkour/you-shop-pro",
   },
   {
@@ -150,7 +151,7 @@ export const PROJECTS = [
       "Express.js",
       "MongoDB",
     ],
-    demo: false,
+    demo: "https://pie-medical.netlify.app/",
     repo: "https://github.com/Saidkour/pie_medical",
   },
   {
@@ -185,7 +186,8 @@ export const PROJECTS = [
 export const Education_FR = [
   {
     year: "2022-2024",
-    title: "Technicien spécialisé en Développement Digital option Web Full Stack",
+    title:
+      "Technicien spécialisé en Développement Digital option Web Full Stack",
     institution: "OFPPT-Tafraout",
     description:
       "Programme de diplôme en Développement Digital complété avec succès à l'OFPPT.",
@@ -223,37 +225,6 @@ export const Education_FR = [
   },
 ];
 
-export const EXPERIENCES_FR = [
-  {
-    year: "2023 - Présent",
-    role: "Développeur Full Stack Senior",
-    company: "Google Inc.",
-    description: `Dirigé une équipe dans le développement et la maintenance d'applications web utilisant JavaScript, React.js et Node.js. Implémenté des API RESTful et intégré des bases de données MongoDB. Collaboré avec les parties prenantes pour définir les exigences et les délais des projets.`,
-    technologies: ["Javascript", "React.js", "Next.js", "mongoDB"],
-  },
-  {
-    year: "2022 - 2023",
-    role: "Développeur Frontend",
-    company: "Adobe",
-    description: `Conçu et développé des interfaces utilisateur pour des applications web utilisant Next.js et React. Travaillé en étroite collaboration avec les développeurs backend pour intégrer les composants frontend avec les API Node.js. Implémenté des designs responsives et optimisé les performances frontend.`,
-    technologies: ["HTML", "CSS", "Vue.js", "mySQL"],
-  },
-  {
-    year: "2021 - 2022",
-    role: "Développeur Full Stack",
-    company: "Facebook",
-    description: `Développé et maintenu des applications web utilisant JavaScript, React.js et Node.js. Conçu et implémenté des API RESTful pour la communication de données. Collaboré avec des équipes multifonctionnelles pour livrer des produits logiciels de haute qualité dans les délais.`,
-    technologies: ["Python", "Svelte", "Three.js", "Postgres"],
-  },
-  {
-    year: "2020 - 2021",
-    role: "Ingénieur Logiciel",
-    company: "Paypal",
-    description: `Contribué au développement d'applications web utilisant JavaScript, React.js et Node.js. Géré des bases de données et implémenté des solutions de stockage de données utilisant MongoDB. Travaillé en étroite collaboration avec les chefs de produit pour prioriser les fonctionnalités et les améliorations.`,
-    technologies: ["Ruby", "Rails", "PHP", "Sqlite"],
-  },
-];
-
 export const PROJECTS_FR = [
   {
     title: "Site E-Commerce",
@@ -268,7 +239,7 @@ export const PROJECTS_FR = [
       "Express.js",
       "MongoDB",
     ],
-    demo: false,
+    demo: "https://you-shop-ecom.netlify.app/",
     repo: "https://github.com/Saidkour/you-shop-pro",
   },
   {
@@ -284,7 +255,7 @@ export const PROJECTS_FR = [
       "Express.js",
       "MongoDB",
     ],
-    demo: false,
+    demo: "https://pie-medical.netlify.app/",
     repo: "https://github.com/Saidkour/pie_medical",
   },
   {

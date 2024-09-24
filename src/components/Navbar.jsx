@@ -6,7 +6,7 @@ import {
   FaRegMoon,
   FaRegSun,
 } from "react-icons/fa";
-import { FaXTwitter } from "react-icons/fa6";
+import { FaUpwork, FaXTwitter } from "react-icons/fa6";
 import { IoMdMoon } from "react-icons/io";
 import { TiWeatherSunny } from "react-icons/ti";
 import { useDispatch, useSelector } from "react-redux";
@@ -40,8 +40,8 @@ const NavBar = () => {
             <a href="https://x.com/SKourbisse1" target="_blanck">
               <FaXTwitter className={`hover:text-primary w-6 h-6`} />
             </a>
-            <a href="https://www.facebook.com" target="_blanck">
-              <FaFacebook className={` w-6 h-6 hover:text-primary`} />
+            <a href="https://www.upwork.com/freelancers/~0165469fd1f9b609ff" target="_blanck">
+              <FaUpwork className={` w-6 h-6 hover:text-primary`} />
             </a>
             <span
               onClick={() => dispatch({ type: TOGGLE_DARK })}

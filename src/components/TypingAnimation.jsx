@@ -1,10 +1,14 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from "react";
 
 const TypingAnimation = () => {
-  const [text, setText] = useState('');
+  const [text, setText] = useState("");
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isReversed, setIsReversed] = useState(false);
-  const [phrases, setPhrases] = useState(['Front End developer', 'Back End developer', 'Full Stack developer']);
+  const [phrases, setPhrases] = useState([
+    "Front End developer",
+    "Back End developer",
+    "Full Stack developer",
+  ]);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -27,12 +31,12 @@ const TypingAnimation = () => {
           const currentPhrase = phrases[currentIndex];
           const currentText = currentPhrase.slice(0, text.length - 1);
           setText(currentText);
-          if (currentText === '') {
+          if (currentText === "") {
             clearInterval(interval);
             setTimeout(() => {
               setIsReversed(false);
               setCurrentIndex((currentIndex + 1) % phrases.length);
-            }, 1000);
+            }, 500);
           }
         }
       }
@@ -41,9 +45,7 @@ const TypingAnimation = () => {
     return () => clearInterval(interval);
   }, [currentIndex, isReversed, phrases, text]);
 
-  return (
-    <span className='mt-3'>I'm {text}</span>
-  );
+  return <span className="mt-3">I'm {text}</span>;
 };
 
 export default TypingAnimation;

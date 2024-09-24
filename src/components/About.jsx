@@ -1,5 +1,5 @@
 import React from "react";
-import aboutImg from "../assets/about.jpg";
+import aboutImg from "../assets/about.webp";
 import { ABOUT_TEXT, ABOUT_TEXT_FR } from "../constants/index";
 import { motion } from "framer-motion";
 import { useSelector } from "react-redux";
@@ -18,7 +18,7 @@ function About() {
             transition={{ duration: 0.9, ease: "easeOut" }}
             className="text-5xl"
           >
-            About <span className="opacity-30 hover:opacity-100">Me</span>
+            About <span className="opacity-50">Me</span>
           </motion.h2>
         </div>
         <div className="grid grid-cols-1   md:grid-cols-2 p-4 ">
@@ -29,7 +29,8 @@ function About() {
             className="p-4 flex justify-center"
           >
             <img
-              className="md:rounded-md md:w-[400px]"
+              className="rounded-md "
+              width={400}
               src={aboutImg}
               alt="aboutImg"
             />
