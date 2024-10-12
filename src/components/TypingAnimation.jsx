@@ -1,14 +1,28 @@
 import React, { useState, useEffect } from "react";
+import { useSelector } from "react-redux";
 
 const TypingAnimation = () => {
+  const lang = useSelector((state) => state.lang);
   const [text, setText] = useState("");
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isReversed, setIsReversed] = useState(false);
-  const [phrases, setPhrases] = useState([
-    "Front End developer",
-    "Back End developer",
-    "Full Stack developer",
-  ]);
+
+  const [phrases, setPhrases] = useState("");
+  useEffect(() => {
+    if (lang === "en") {
+      setPhrases([
+        "Front End developer",
+        "Back End developer",
+        "Full Stack developer",
+      ]);
+    } else {
+      setPhrases([
+        "Développeur Front End",
+        "Développeur Back End",
+        "Développeur Full Stack",
+      ]);
+    }
+  }, [lang]);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -45,7 +59,11 @@ const TypingAnimation = () => {
     return () => clearInterval(interval);
   }, [currentIndex, isReversed, phrases, text]);
 
-  return <span className="mt-3">I'm {text}</span>;
+  return (
+    <span className="mt-3">
+      {lang == "en" ? "I'm a" : "Je suis"} {text}
+    </span>
+  );
 };
 
 export default TypingAnimation;

@@ -1,14 +1,14 @@
 import { FaFacebook, FaGithub, FaLinkedin } from "react-icons/fa";
-import { CONTACT } from "../constants";
+import { CONSTANTS } from "../constants/index";
 import { FaXTwitter } from "react-icons/fa6";
 import { useSelector } from "react-redux";
 import { motion } from "framer-motion";
 
 function Contact() {
   const dark = useSelector((state) => state.dark);
+  const CONTACT = CONSTANTS.CONTACT;
   return (
     <div className="py-[100px]">
-      {/* <hr className="sm:w-[600px] pt-[50px] mt-12 m-auto" /> */}
       <div className=" px-5 container m-auto pb-10">
         <div className="text-center p-2">
           <motion.h2
@@ -42,7 +42,7 @@ function Contact() {
             initial={{ x: 200, opacity: 0 }}
             transition={{ duration: 0.9, ease: "easeOut" }}
           >
-            <a href="" className="border-b">
+            <a href={`mailto:${CONTACT.email}`} className="border-b">
               {CONTACT.email}
             </a>
           </motion.p>

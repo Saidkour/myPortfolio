@@ -52,14 +52,15 @@ const AppParticals = () => {
         },
         particles: {
           color: {
-            value: `${dark ? "#ffffff" : "#000000"}`,
+            // value: `${dark ? "#ffffff" : "#000000"}`,
+            value: "#845ec2",
           },
           links: {
             color: `${dark ? "#ffffff" : "#000000"}`,
             distance: 150,
             enable: true,
-            opacity: 0.5,
-            width: 1,
+            opacity: 0.3,
+            width: 0.5,
           },
           move: {
             direction: "none",
@@ -85,7 +86,7 @@ const AppParticals = () => {
             type: "circle",
           },
           size: {
-            value: { min: 1, max: 5 },
+            value: { min: 1, max: 3 },
           },
         },
         detectRetina: true,

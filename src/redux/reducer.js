@@ -1,8 +1,8 @@
 import { TOGGLE_DARK, TOGGLE_LANG } from "./actionType";
 
 const initialState = {
-    dark: true,
-    lang: "en"
+    dark: false,
+    lang: "fr"
 };
 
 const reducer = (state = initialState, action) => {

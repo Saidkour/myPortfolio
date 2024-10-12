@@ -1,14 +1,14 @@
 import { useSelector } from "react-redux";
 import img from "../assets/homeheader.webp";
-import { HERO_CONTENT, HERO_CONTENT_FR } from "../constants/index";
-import { useAnimation, motion } from "framer-motion";
+import { CONSTANTS } from "../constants/index";
+import { motion } from "framer-motion";
 import TypingAnimation from "./TypingAnimation";
 import { Blurhash } from "react-blurhash";
 import { useEffect, useState } from "react";
 function HomeHeader() {
-  const dark = useSelector((state) => state.dark);
   const lang = useSelector((state) => state.lang);
-  const HERO_CONT = lang === "en" ? HERO_CONTENT : HERO_CONTENT_FR;
+  const HERO_CONT =
+    lang === "en" ? CONSTANTS.HERO_CONTENT : CONSTANTS.HERO_CONTENT_FR;
   const [imgLoaded, setImgLoaded] = useState(false);
   useEffect(() => {
     const imgElement = new Image();
@@ -18,14 +18,18 @@ function HomeHeader() {
       setImgLoaded(true);
     };
   }, [img]);
+  const cv =
+    lang == "en"
+      ? "https://drive.google.com/file/d/15PnWmbVeFsIrfSoBH6Usg12aXLJQL4R6/view?usp=sharing"
+      : "https://drive.google.com/file/d/1PIa5sJnh9kzFuQRIoJKJymaf820ziYgb/view?usp=sharing";
   const texts = {
     en: {
-      downloadCV: "Download CV",
-      getInTouch: "Get in touch"
+      downloadCV: "Download CV | EN",
+      getInTouch: "Get in touch",
     },
     fr: {
-      downloadCV: "Télécharger CV",
-      getInTouch: "Entrer en contact"
+      downloadCV: "Télécharger CV | FR",
+      getInTouch: "Entrer en contact",
     },
   };
   return (
@@ -52,7 +56,7 @@ function HomeHeader() {
             whileInView={{ opacity: 1, x: 0 }}
             initial={{ x: -200, opacity: 0 }}
             transition={{ duration: 0.9, ease: "easeOut" }}
-            className="bg-gradient-to-r flex  from-pink-600 via-slate-400 to-primary bg-clip-text text-3xl md:text-4xl traking-tight text-transparent transition-all animate-bg duration-75 ease-out animate-pulse"
+            className="bg-gradient-to-r flex  from-pink-600 via-sky-950  bg-clip-text text-2xl md:text-4xl traking-tight text-transparent transition-all animate-bg duration-75 ease-out animate-pulse"
           >
             <TypingAnimation />
           </motion.h2>
@@ -61,7 +65,7 @@ function HomeHeader() {
               whileInView={{ opacity: 1, x: 0 }}
               initial={{ x: -150, opacity: 0 }}
               transition={{ duration: 0.9, ease: "easeOut" }}
-              className="font-medium py-2 px-4 rounded-[50px] inline-flex hover:text-primary bg-primary hover:bg-transparent border border-primary items-center mt-7"
+              className="font-medium text-sm py-2 px-3 rounded-[50px] inline-flex hover:text-primary bg-primary  hover:bg-transparent border border-primary items-center mt-7"
               aria-label="Download Said Kourbisse's CV"
             >
               <svg
@@ -73,7 +77,7 @@ function HomeHeader() {
               </svg>
               <span>
                 <a
-                  href="https://drive.google.com/file/d/1avUa0Aoa20mM0MicWe4TULib6nF--8nw/view?usp=sharing"
+                  href={cv}
                   target="_blank"
                   download="said_kourbisseNeww.pdf"
                   aria-label="Download Said Kourbisse's CV"
@@ -87,7 +91,7 @@ function HomeHeader() {
               whileInView={{ opacity: 1, x: 0 }}
               initial={{ x: -200, opacity: 0 }}
               transition={{ duration: 0.9, ease: "easeOut" }}
-              className="font-medium ml-4 py-2 px-4 rounded-[50px] inline-flex hover:text-primary bg-primary hover:bg-transparent border border-primary items-center mt-7"
+              className="font-medium text-sm ml-2 py-2 px-3 rounded-[50px] inline-flex hover:text-primary bg-primary hover:bg-transparent border border-primary items-center mt-7"
               aria-label="Contact Said Kourbisse"
             >
               <svg

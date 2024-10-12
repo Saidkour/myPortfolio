@@ -1,16 +1,15 @@
 import React from "react";
-import { EXPERIENCE, EXPERIENCE_FR } from "../constants";
+import { CONSTANTS } from "../constants/index";
 import { motion } from "framer-motion";
 import { useSelector } from "react-redux";
 function ExperienceSection() {
   const lang = useSelector((state) => state.lang);
   const dark = useSelector((state) => state.dark);
-  const EXP = lang === "en" ? EXPERIENCE : EXPERIENCE_FR;
+  const EXP = lang === "en" ? CONSTANTS.EXPERIENCE : CONSTANTS.EXPERIENCE_FR;
   return (
     <>
-      {/* <hr className="sm:w-[600px] pt-[100px] mt-20 m-auto" /> */}
-      <div className=" px-5 overflow-hidden container m-auto">
-        <div className="text-center p-2">
+      <div className="mt-10 px-5 overflow-hidden container m-auto">
+        <div className="text-center flex justify-center  p-2">
           <motion.h2
             whileInView={{ opacity: 1, y: 0 }}
             initial={{ y: -50, opacity: 0 }}
@@ -26,10 +25,10 @@ function ExperienceSection() {
               <motion.div
                 whileInView={{ opacity: 1, x: 0 }}
                 initial={{ x: -200, opacity: 0 }}
-                transition={{ duration: 0.9, ease: "easeOut" }}
+                transition={{ duration: 0.9, ease: "backInOut" }}
                 className="flex justify-center sm:col-span-2 mb-4 sm:m-auto "
               >
-                <p className="text-xl p-2">{exp.year}</p>
+                <p className="text-xl p-2 text-primary">{exp.year}</p>
               </motion.div>
               <motion.div
                 whileInView={{ opacity: 1, x: 0 }}
@@ -37,18 +36,20 @@ function ExperienceSection() {
                 transition={{ duration: 0.9, ease: "easeOut" }}
                 className="sm:col-span-4 "
               >
-                <h3 className="text-4xl  mb-4">{exp.company}</h3>
-                <h4 className="text-xl  opacity-70 mb-4">{exp.role}</h4>
-                <p className=" text-md opacity-75">{exp.description}</p>
-                <p className="font-semi-bold grid grid-cols-3 sm:grid-cols-5 opacity-75">
+                <h3 className="md:text-2xl text-2xl font-semi-bold mb-4">
+                  {exp.company}
+                </h3>
+                <h4 className="md:text-2xl text-xl font-semi-bold opacity-80 mb-4">
+                  {exp.role}
+                </h4>
+                <p className=" text-[14px] md:text-xl font-semi-bold opacity-65">
+                  {exp.description}
+                </p>
+                <p className="font-semi-bold grid grid-cols-6 sm:grid-cols-12 opacity-75">
                   {exp.technologies.map((tech, index) => (
                     <span
                       key={index}
-                      className={`mr-2 p-2 border rounded-3xl text-center text-[14px] md:text-xl  grid-cols-1 mt-4  ${
-                        dark
-                          ? "text-primary hover:text-black hover:bg-primary border-primary"
-                          : "text-primary border-primary hover:bg-primary hover:text-blue-100"
-                      } `}
+                      className={`p-2 text-center md:text-[42px] text-[28px] md:text-xl  grid-cols-1 mt-4`}
                     >
                       {tech}
                     </span>
