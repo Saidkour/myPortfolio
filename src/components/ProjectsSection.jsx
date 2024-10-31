@@ -39,46 +39,41 @@ const ProjetCard = ({ projet }) => {
       transition={{ duration: 1, ease: "easeOut" }}
       className={`${
         dark ? "backdrop-blur-sm" : "backdrop-blur-lg bg-transparent "
-      } drop-shadow-lg  transition-all duration-150 ease-out shadow-xl shadow-primary sm:col-span-3 rounded-lg mt-2 p-4`}
+      }  transition-all duration-150 ease-out  sm:col-span-3 rounded-lg mt-2 p-4`}
     >
-      <div className="md:p-6  m-auto justify-center">
+      <div className="md:p-6 m-auto justify-center">
         <img
-          className="rounded-md"
+          className="rounded-md flex m-auto"
           loading="lazy"
+          width={500}
+          height={400}
           src={currentImg}
           alt={projet.title}
         />
-        <div className="flex rounded-sm mt-1  justify-end">
+        <div className="flex rounded-sm mt-1   justify-center">
           {projet?.image.length > 1 &&
             projet?.image.map((path, index) => {
               return (
                 <img
-                  onMouseEnter={() => setCurrentImg(path)}
+                  onClick={() => setCurrentImg(path)}
                   key={index}
                   src={path}
+                  width={100}
+                  height={100}
                   alt="img"
+                  loading="lazy"
                   className={`ml-1 ${
                     currentImg == path ? "border-primary border" : "border-none"
-                  } sm:w-[100px] w-[70px] rounded-md`}
+                  } cursor-pointer  hover:border-yellow-300 rounded-md`}
                 />
               );
             })}
         </div>
       </div>
-      <motion.div
-        className="sm:col-span-4 pt-4 p-2 "
-        // whileInView={{ opacity: 1, x: 0 }}
-        // initial={{ x: 200, opacity: 0 }}
-        // transition={{ duration: 0.9, ease: "easeOut" }}
-      >
+      <motion.div className="sm:col-span-4 pt-4 p-2 ">
         <h3 className="text-2xl font-semi-bold mb-4">{projet.title}</h3>
         <h4 className="md:text-sm opacity-70 mb-4">{projet.description}</h4>
-        <p
-          //   whileInView={{ opacity: 1, x: 0 }}
-          //   initial={{ x: 50, opacity: 0 }}
-          //   transition={{ duration: 0.9, ease: "backOut" }}
-          className="font-semi-bold grid grid-cols-6 sm:grid-cols-12 opacity-75"
-        >
+        <p className="font-semi-bold grid grid-cols-6 sm:grid-cols-12 opacity-75">
           {projet.technologies.map((tech, index) => (
             <span
               key={index}

@@ -3,25 +3,14 @@ import img from "../assets/homeheader.webp";
 import { CONSTANTS } from "../constants/index";
 import { motion } from "framer-motion";
 import TypingAnimation from "./TypingAnimation";
-import { Blurhash } from "react-blurhash";
-import { useEffect, useState } from "react";
 function HomeHeader() {
   const lang = useSelector((state) => state.lang);
   const HERO_CONT =
     lang === "en" ? CONSTANTS.HERO_CONTENT : CONSTANTS.HERO_CONTENT_FR;
-  const [imgLoaded, setImgLoaded] = useState(false);
-  useEffect(() => {
-    const imgElement = new Image();
-    imgElement.src = img;
-    imgElement.onload = () => {
-      console.log("loaded");
-      setImgLoaded(true);
-    };
-  }, [img]);
   const cv =
     lang == "en"
-      ? "https://drive.google.com/file/d/15PnWmbVeFsIrfSoBH6Usg12aXLJQL4R6/view?usp=sharing"
-      : "https://drive.google.com/file/d/1PIa5sJnh9kzFuQRIoJKJymaf820ziYgb/view?usp=sharing";
+      ? "https://drive.google.com/file/d/1ka9WSEOubbnAg8cIE_kPkLN3AuaEWJAA/view?usp=sharing"
+      : "https://drive.google.com/file/d/1ermlkwv4TYoasW755O0mQ0XRdb6N-w9v/view?usp=sharing";
   const texts = {
     en: {
       downloadCV: "Download CV | EN",
@@ -34,7 +23,7 @@ function HomeHeader() {
   };
   return (
     <div>
-      <div className="grid grid-cols-1 container m-auto  md:grid-cols-2 pt-[110px] pb-[100px]">
+      <div className="grid grid-cols-1 container m-auto md:grid-cols-2 pt-[110px] pb-[100px]">
         <div className="py-4 px-4 sm:px-4 overflow-hidden">
           <motion.h1
             whileInView={{ opacity: 1, x: 0 }}
@@ -56,7 +45,7 @@ function HomeHeader() {
             whileInView={{ opacity: 1, x: 0 }}
             initial={{ x: -200, opacity: 0 }}
             transition={{ duration: 0.9, ease: "easeOut" }}
-            className="bg-gradient-to-r flex  from-pink-600 via-sky-950  bg-clip-text text-2xl md:text-4xl traking-tight text-transparent transition-all animate-bg duration-75 ease-out animate-pulse"
+            className="bg-gradient-to-r flex from-pink-600 via-sky-950 bg-clip-text text-2xl md:text-4xl traking-tight text-transparent transition-all animate-bg duration-75 ease-out animate-pulse"
           >
             <TypingAnimation />
           </motion.h2>
@@ -86,7 +75,6 @@ function HomeHeader() {
                 </a>
               </span>
             </motion.button>
-
             <motion.button
               whileInView={{ opacity: 1, x: 0 }}
               initial={{ x: -200, opacity: 0 }}
@@ -120,29 +108,17 @@ function HomeHeader() {
             transition={{ duration: 0.9, ease: "easeOut" }}
             className="md:rounded-r-[40px] overflow-hidden"
           >
-            {imgLoaded ? (
-              <img
-                className="w-full h-full"
-                src={img}
-                loading="lazy"
-                alt="img-me"
-              />
-            ) : (
-              <div className=" max-w-[400px] md:max-w-max flex m-auto  overflow-x-hidden">
-                <Blurhash
-                  hash="LF7BsC?w%NxuE2I9ITM{tPovtRn#"
-                  width={640}
-                  height={426.66}
-                  resolutionX={32}
-                  resolutionY={32}
-                />
-              </div>
-            )}
+            <img
+              loading="lazy"
+              width={640}
+              height={426.66}
+              src={img}
+              alt="img-me"
+            />
           </motion.div>
         </div>
       </div>
     </div>
   );
 }
-
 export default HomeHeader;

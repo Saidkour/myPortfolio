@@ -1,6 +1,6 @@
 import { FaFacebook, FaGithub, FaLinkedin } from "react-icons/fa";
 import { CONSTANTS } from "../constants/index";
-import { FaXTwitter } from "react-icons/fa6";
+import { FaUpwork, FaXTwitter } from "react-icons/fa6";
 import { useSelector } from "react-redux";
 import { motion } from "framer-motion";
 
@@ -77,12 +77,11 @@ function Contact() {
               } w-6 h-6`}
             />
           </a>
-          <a href="https://www.facebook.com" target="_blanck">
-            <FaFacebook
-              className={`${
-                !dark ? "hover:text-primary" : "hover:text-primary"
-              } w-6 h-6`}
-            />
+          <a
+            href="https://www.upwork.com/freelancers/~0165469fd1f9b609ff"
+            target="_blanck"
+          >
+            <FaUpwork className={` w-6 h-6 md:hover:text-primary`} />
           </a>
         </motion.div>
       </div>

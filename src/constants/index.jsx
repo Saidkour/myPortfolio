@@ -1,11 +1,11 @@
 import project1 from "../assets/projects/homeheaderyoushop.webp";
-import project14 from "../assets/projects/youshop3.png";
-import project12 from "../assets/projects/youshop1.png";
-import project13 from "../assets/projects/youshop2.png";
+import project14 from "../assets/projects/youshop3.webp";
+import project12 from "../assets/projects/youshop1.webp";
+import project13 from "../assets/projects/youshop2.webp";
 import project2 from "../assets/projects/piemedical.webp";
-import project21 from "../assets/projects/pie1.png";
-import project22 from "../assets/projects/pie2.png";
-import project3 from "../assets/projects/portfolio.png";
+import project21 from "../assets/projects/pie1.webp";
+import project22 from "../assets/projects/pie2.webp";
+import project3 from "../assets/projects/portfolio.webp";
 import project4 from "../assets/projects/edusysimg.webp";
 import project5 from "../assets/projects/movieapimg.webp";
 import {
@@ -287,7 +287,7 @@ export const CONSTANTS = {
     },
   ],
   CONTACT: {
-    address: "Tafraoute,Maroc ",
+    address: "Agadir,Maroc ",
     phoneNo: "+212 6 79 08 08 17",
     email: "saidkourbisse@gmail.com",
   },
