@@ -56,6 +56,7 @@ function Contact() {
           <a
             href="https://www.linkedin.com/in/said-kourbisse-aa0386164/"
             target="_blanck"
+            aria-label="LinkedIn"
           >
             <FaLinkedin
               className={`${
@@ -63,14 +64,14 @@ function Contact() {
               } w-6 h-6`}
             />
           </a>
-          <a href="https://www.github.com/saidkour" target="_blanck">
+          <a href="https://www.github.com/saidkour" target="_blanck" aria-label="GitHub">
             <FaGithub
               className={`${
                 !dark ? "hover:text-primary" : "hover:text-primary"
               } w-6 h-6`}
             />
           </a>
-          <a href="https://x.com/SKourbisse1" target="_blanck">
+          <a href="https://x.com/SKourbisse1" target="_blanck" aria-label="Twitter">
             <FaXTwitter
               className={`${
                 !dark ? "hover:text-primary" : "hover:text-primary"
@@ -80,6 +81,7 @@ function Contact() {
           <a
             href="https://www.upwork.com/freelancers/~0165469fd1f9b609ff"
             target="_blanck"
+            aria-label="Upwork"
           >
             <FaUpwork className={` w-6 h-6 md:hover:text-primary`} />
           </a>

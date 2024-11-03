@@ -54,7 +54,7 @@ function HomeHeader() {
               whileInView={{ opacity: 1, x: 0 }}
               initial={{ x: -150, opacity: 0 }}
               transition={{ duration: 0.9, ease: "easeOut" }}
-              className="font-medium text-sm py-2 px-3 rounded-[50px] inline-flex hover:text-primary bg-primary  hover:bg-transparent border border-primary items-center mt-7"
+              className="font-medium text-white text-sm py-2 px-3 rounded-[50px] inline-flex hover:text-primary bg-primary  hover:bg-transparent border border-primary items-center mt-7"
               aria-label="Download Said Kourbisse's CV"
             >
               <svg
@@ -67,6 +67,7 @@ function HomeHeader() {
               <span>
                 <a
                   href={cv}
+                  className="py-2"
                   target="_blank"
                   download="said_kourbisseNeww.pdf"
                   aria-label="Download Said Kourbisse's CV"
@@ -79,7 +80,7 @@ function HomeHeader() {
               whileInView={{ opacity: 1, x: 0 }}
               initial={{ x: -200, opacity: 0 }}
               transition={{ duration: 0.9, ease: "easeOut" }}
-              className="font-medium text-sm ml-2 py-2 px-3 rounded-[50px] inline-flex hover:text-primary bg-primary hover:bg-transparent border border-primary items-center mt-7"
+              className="font-medium text-white text-sm ml-2 py-2 px-3 rounded-[50px] inline-flex hover:text-primary bg-primary hover:bg-transparent border border-primary items-center mt-7"
               aria-label="Contact Said Kourbisse"
             >
               <svg
@@ -93,6 +94,7 @@ function HomeHeader() {
                 <a
                   href="https://linktr.ee/saidkourbisse"
                   target="_blank"
+                  className="py-2"
                   aria-label="Contact Said Kourbisse"
                 >
                   {texts[lang].getInTouch}
@@ -110,8 +112,6 @@ function HomeHeader() {
           >
             <img
               loading="lazy"
-              width={640}
-              height={426.66}
               src={img}
               alt="img-me"
             />

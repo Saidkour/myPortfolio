@@ -14,6 +14,7 @@ import { Link } from "react-router-dom";
 import { TOGGLE_DARK, TOGGLE_LANG } from "../redux/actionType";
 import logowhite from "../assets/logowhite2.svg";
 import logoblack from "../assets/logoblack2.svg";
+
 const NavBar = () => {
   const dark = useSelector((state) => state.dark);
   const lang = useSelector((state) => state.lang);
@@ -36,18 +37,20 @@ const NavBar = () => {
               <a
                 href="https://www.linkedin.com/in/said-kourbisse-aa0386164/"
                 target="_blanck"
+                aria-label="LinkedIn"
               >
                 <FaLinkedin className={`md:hover:text-primary w-6 h-6`} />
               </a>
-              <a href="https://www.github.com/saidkour" target="_blanck">
+              <a href="https://www.github.com/saidkour" target="_blanck" aria-label="GitHub">
                 <FaGithub className={`md:hover:text-primary w-6 h-6`} />
               </a>
-              <a href="https://x.com/SKourbisse1" target="_blanck">
+              <a href="https://x.com/SKourbisse1" target="_blanck" aria-label="Twitter">
                 <FaXTwitter className={`md:hover:text-primary w-6 h-6`} />
               </a>
               <a
                 href="https://www.upwork.com/freelancers/~0165469fd1f9b609ff"
                 target="_blanck"
+                aria-label="Upwork"
               >
                 <FaUpwork className={` w-6 h-6 md:hover:text-primary`} />
               </a>

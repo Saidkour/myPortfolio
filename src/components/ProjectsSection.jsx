@@ -39,7 +39,7 @@ const ProjetCard = ({ projet }) => {
       transition={{ duration: 1, ease: "easeOut" }}
       className={`${
         dark ? "backdrop-blur-sm" : "backdrop-blur-lg bg-transparent "
-      }  transition-all duration-150 ease-out  sm:col-span-3 rounded-lg mt-2 p-4`}
+      }  transition-all duration-150 flex flex-col justify-between ease-out  sm:col-span-3 rounded-lg mt-2 p-4`}
     >
       <div className="md:p-6 m-auto justify-center">
         <img
@@ -50,22 +50,24 @@ const ProjetCard = ({ projet }) => {
           src={currentImg}
           alt={projet.title}
         />
-        <div className="flex rounded-sm mt-1   justify-center">
+        <div className="flex rounded-sm mt-1 justify-center">
           {projet?.image.length > 1 &&
             projet?.image.map((path, index) => {
               return (
-                <img
-                  onClick={() => setCurrentImg(path)}
-                  key={index}
-                  src={path}
-                  width={100}
-                  height={100}
-                  alt="img"
-                  loading="lazy"
-                  className={`ml-1 ${
-                    currentImg == path ? "border-primary border" : "border-none"
-                  } cursor-pointer  hover:border-yellow-300 rounded-md`}
-                />
+                <div className="w-[80px] h-[80px] sm:w-[100px] sm:h-[100px]">
+                  <img
+                    onClick={() => setCurrentImg(path)}
+                    key={index}
+                    src={path}
+                    alt="img"
+                    loading="lazy"
+                    className={`ml-1 ${
+                      currentImg == path
+                        ? "border-primary border"
+                        : "border-none"
+                    } cursor-pointer  hover:border-yellow-300 rounded-md`}
+                  />
+                </div>
               );
             })}
         </div>
@@ -73,6 +75,8 @@ const ProjetCard = ({ projet }) => {
       <motion.div className="sm:col-span-4 pt-4 p-2 ">
         <h3 className="text-2xl font-semi-bold mb-4">{projet.title}</h3>
         <h4 className="md:text-sm opacity-70 mb-4">{projet.description}</h4>
+      </motion.div>
+      <div className="flex flex-col justify-between m-auto ">
         <p className="font-semi-bold grid grid-cols-6 sm:grid-cols-12 opacity-75">
           {projet.technologies.map((tech, index) => (
             <span
@@ -87,12 +91,12 @@ const ProjetCard = ({ projet }) => {
           whileInView={{ opacity: 1, x: 0 }}
           initial={{ x: 100, opacity: 0 }}
           transition={{ duration: 0.9, ease: "easeOut" }}
-          className="mt-5  flex  text-center"
+          className="mt-5 grid grid-cols-2 text-center"
         >
           <a
             className={`py-2 rounded-3xl ${
               projet.demo ? "cursor-pointer" : "cursor-none"
-            } bg-primary min-w-[100px]  ml-4  border border-primary hover:bg-transparent ${
+            } bg-primary justify-center primary hover:bg-transparent ${
               dark
                 ? "text-white hover:text-primary"
                 : "text-white hover:text-primary"
@@ -103,7 +107,7 @@ const ProjetCard = ({ projet }) => {
             {`${projet.demo ? "Demo" : ""}`}
           </a>
           <a
-            className={`py-2 px-3 rounded-3xl bg-primary flex max-w-52  ml-4 border  hover:border border-primary hover:bg-transparent ${
+            className={`py-2 flex p-9 rounded-3xl  bg-primary ml-4 border  hover:border border-primary hover:bg-transparent ${
               dark
                 ? "text-white hover:text-primary"
                 : "text-white hover:text-primary"
@@ -111,11 +115,11 @@ const ProjetCard = ({ projet }) => {
             href={`${projet.repo ? projet.repo : "#"}`}
             target={`${projet.demo ? "_blanck" : ""}`}
           >
-            Code |
+            <span> Code |</span>
             <SiGithub className="m-auto ml-2" />
           </a>
         </motion.p>
-      </motion.div>
+      </div>
     </motion.div>
   );
 };
