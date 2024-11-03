@@ -9,8 +9,8 @@ function HomeHeader() {
     lang === "en" ? CONSTANTS.HERO_CONTENT : CONSTANTS.HERO_CONTENT_FR;
   const cv =
     lang == "en"
-      ? "https://drive.google.com/file/d/1ka9WSEOubbnAg8cIE_kPkLN3AuaEWJAA/view?usp=sharing"
-      : "https://drive.google.com/file/d/1ermlkwv4TYoasW755O0mQ0XRdb6N-w9v/view?usp=sharing";
+      ? "https://drive.google.com/file/d/1CDZrC94-9RGrn2_3bZ5y-A1QQgWUVTFP/view?usp=sharing"
+      : "https://drive.google.com/file/d/1p3DCw6GB2jjjZ1zqYXDBKOXuIQhnmK5N/view?usp=sharing";
   const texts = {
     en: {
       downloadCV: "Download CV | EN",
@@ -110,11 +110,7 @@ function HomeHeader() {
             transition={{ duration: 0.9, ease: "easeOut" }}
             className="md:rounded-r-[40px] overflow-hidden"
           >
-            <img
-              loading="lazy"
-              src={img}
-              alt="img-me"
-            />
+            <img loading="lazy" src={img} alt="img-me" />
           </motion.div>
         </div>
       </div>
