@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { CONSTANTS } from "../constants/index";
 import { useSelector } from "react-redux";
 import { motion } from "framer-motion";
@@ -32,6 +32,18 @@ function ProjectsSection() {
 const ProjetCard = ({ projet }) => {
   const dark = useSelector((state) => state.dark);
   const [currentImg, setCurrentImg] = useState(projet.image[0]);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentImg((prevImg) => {
+        const currentIndex = projet.image.indexOf(prevImg);
+        const nextIndex = (currentIndex + 1) % projet.image.length;
+        return projet.image[nextIndex];
+      });
+    }, 3000);
+
+    return () => clearInterval(interval);
+  }, [projet.image]);
   return (
     <motion.div
       whileInView={{ opacity: 1 }}
@@ -41,27 +53,46 @@ const ProjetCard = ({ projet }) => {
         dark ? "backdrop-blur-sm" : "backdrop-blur-lg bg-transparent "
       }  transition-all duration-150 flex flex-col justify-between ease-out  sm:col-span-3 rounded-lg mt-2 p-4`}
     >
-      <div className="md:p-6 m-auto justify-center">
+      <div className="md:p-6 relative m-auto justify-center">
+        {/* <motion.span
+          whileInView={{
+            boxShadow: [
+              "0px 0px 0px rgba(0, 0, 0, 0)",
+              "0px 0px 20px rgba(0, 0, 0, 0.5)",
+              "0px 0px 0px rgba(0, 0, 0, 0)",
+            ],
+          }}
+          transition={{
+            duration: 2,
+            ease: "linear",
+            repeat: Infinity,
+            repeatType: "loop",
+          }}
+          className="absulote md:top-0 text-green-500 text-6xl md:text-8xl right-0 bottom-0 left-0 "
+        >
+          .
+        </motion.span> */}
         <img
-          className="rounded-md flex m-auto"
+          className="rounded-md   flex m-auto"
           loading="lazy"
           width={500}
           height={400}
           src={currentImg}
           alt={projet.title}
         />
+
         <div className="flex rounded-sm mt-1 justify-center">
           {projet?.image.length > 1 &&
             projet?.image.map((path, index) => {
               return (
-                <div className="w-[80px] h-[80px] sm:w-[100px] sm:h-[100px]">
+                <div className="w-[80px] ml-1 h-auto sm:w-[100px] sm:h-[100px]">
                   <img
                     onClick={() => setCurrentImg(path)}
                     key={index}
                     src={path}
                     alt="img"
                     loading="lazy"
-                    className={`ml-1 ${
+                    className={` ${
                       currentImg == path
                         ? "border-primary border"
                         : "border-none"

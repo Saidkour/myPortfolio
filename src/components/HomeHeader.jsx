@@ -110,7 +110,7 @@ function HomeHeader() {
             transition={{ duration: 0.9, ease: "easeOut" }}
             className="md:rounded-r-[40px] overflow-hidden"
           >
-            <img loading="lazy" src={img} alt="img-me" />
+            <img loading="lazy" className="w-[450px] sm:w-auto" src={img} alt="img-me" />
           </motion.div>
         </div>
       </div>

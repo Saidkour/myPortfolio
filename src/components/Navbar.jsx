@@ -12,9 +12,8 @@ import { TiWeatherSunny } from "react-icons/ti";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import { TOGGLE_DARK, TOGGLE_LANG } from "../redux/actionType";
-import logowhite from "../assets/logowhite2.svg";
-import logoblack from "../assets/logoblack2.svg";
-
+import logowhite from "../assets/whitlogo.gif";
+import logoblack from "../assets/mylogo.gif";
 const NavBar = () => {
   const dark = useSelector((state) => state.dark);
   const lang = useSelector((state) => state.lang);
@@ -28,9 +27,9 @@ const NavBar = () => {
           <div className="container mx-auto flex justify-between sm:flex-row relative sm:justify-between ">
             <a href="/">
               {dark ? (
-                <img className=" w-[40px]" src={logowhite} alt="logo white" />
-              ) : (
                 <img className=" w-[40px]" src={logoblack} alt="logo black" />
+              ) : (
+                <img className=" w-[40px]" src={logowhite} alt="logo white" />
               )}
             </a>
             <div className="flex justify-evenly min-w-[250px] my-auto sm:justify-between sm:p-2">
@@ -41,10 +40,18 @@ const NavBar = () => {
               >
                 <FaLinkedin className={`md:hover:text-primary w-6 h-6`} />
               </a>
-              <a href="https://www.github.com/saidkour" target="_blanck" aria-label="GitHub">
+              <a
+                href="https://www.github.com/saidkour"
+                target="_blanck"
+                aria-label="GitHub"
+              >
                 <FaGithub className={`md:hover:text-primary w-6 h-6`} />
               </a>
-              <a href="https://x.com/SKourbisse1" target="_blanck" aria-label="Twitter">
+              <a
+                href="https://x.com/SKourbisse1"
+                target="_blanck"
+                aria-label="Twitter"
+              >
                 <FaXTwitter className={`md:hover:text-primary w-6 h-6`} />
               </a>
               <a

@@ -1,15 +1,13 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
- 
 
-:root{
+:root {
   font-family: "Inter", sans-serif;
 }
 #particles-js {
-  position: relative; 
-  z-index: 0;  
+  position: relative;
+  z-index: 0;
 }
 #tsparticles {
   position: absolute;
@@ -19,7 +17,6 @@
   left: 0;
   z-index: -1;
 }
-
 
 /* .animated-gradient-text {
   background-image: linear-gradient(to right, fuchsia, #6495ed, #800080);

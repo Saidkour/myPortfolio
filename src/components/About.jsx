@@ -42,7 +42,7 @@ function About() {
             initial={{ x: 200, opacity: 0 }}
             transition={{ duration: 0.9, ease: "easeOut" }}
           >
-            <p className="flex text-justify text-xl ">
+            <p className="flex  text-justify text-lg sm:text-xl ">
               <span className="">{ABOUT_TE}</span>
             </p>
           </motion.div>
