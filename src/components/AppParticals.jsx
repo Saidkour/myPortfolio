@@ -65,7 +65,7 @@ const AppParticals = () => {
             particles: {
               color: {
                 // value: `${dark ? "#ffffff" : "#000000"}`,
-                value: "#845ec2",
+                value: ["#1A1A1A", "#F5F5F5", "#707070", "#845EC2"],
               },
               links: {
                 color: `${dark ? "#ffffff" : "#000000"}`,

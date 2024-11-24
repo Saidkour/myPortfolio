@@ -9,9 +9,8 @@ function About() {
   const ABOUT_TE =
     lang === "en" ? CONSTANTS.ABOUT_TEXT : CONSTANTS.ABOUT_TEXT_FR;
   return (
-    <>
-      {/* <hr className="sm:w-[600px] pt-[50px] mt-12 m-auto" /> */}
-      <div className="px-5 container overflow-hidden  m-auto">
+    <div className="backdrop-blur-[4px]">
+      <div className="px-5 container overflow-hidden  m-auto ">
         <div className="text-center p-[50px]">
           <motion.h2
             whileInView={{ opacity: 1, y: 0 }}
@@ -22,7 +21,7 @@ function About() {
             About <span className="opacity-50">Me</span>
           </motion.h2>
         </div>
-        <div className="grid grid-cols-1  md:grid-cols-9 p-4 ">
+        <div className="grid grid-cols-1  lg:grid-cols-9 p-4 ">
           <motion.div
             whileInView={{ opacity: 1, x: 0 }}
             initial={{ x: -200, opacity: 0 }}
@@ -31,7 +30,9 @@ function About() {
           >
             <img
               className="rounded-md "
+              loading="lazy"
               width={400}
+              height={400}
               src={aboutImg}
               alt="aboutImg"
             />
@@ -48,7 +49,7 @@ function About() {
           </motion.div>
         </div>
       </div>
-    </>
+    </div>
   );
 }
 

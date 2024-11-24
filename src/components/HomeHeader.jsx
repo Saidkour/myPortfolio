@@ -22,14 +22,14 @@ function HomeHeader() {
     },
   };
   return (
-    <div>
-      <div className="grid grid-cols-1 container m-auto md:grid-cols-2 pt-[110px] pb-[100px]">
+    <div className="backdrop-blur-[4px]">
+      <div className="grid grid-cols-1 container m-auto lg:grid-cols-2 pt-[110px] pb-[100px]">
         <div className="py-4 px-4 sm:px-4 overflow-hidden">
           <motion.h1
             whileInView={{ opacity: 1, x: 0 }}
             initial={{ x: -200, opacity: 0 }}
             transition={{ duration: 0.9, ease: "easeOut" }}
-            className="pb-2 text-5xl text-center md:text-left font-thin tracking-tight lg:mt-16 lg:text-7xl"
+            className="pb-2 text-5xl text-center md:text-left font-thin tracking-tight lg:mt-16 xl:text-7xl"
           >
             SAID KOURBISSE
           </motion.h1>
@@ -103,14 +103,14 @@ function HomeHeader() {
             </motion.button>
           </div>
         </div>
-        <div className="m-auto mt-8 md:mt-0 overflow-hidden">
+        <div className="m-auto mt-8 md:mt-0 overflow-hidden md:p-[40px]">
           <motion.div
+            className="md:rounded-r-[40px] overflow-hidden"
             whileInView={{ opacity: 1, x: 0 }}
             initial={{ x: 200, opacity: 0 }}
             transition={{ duration: 0.9, ease: "easeOut" }}
-            className="md:rounded-r-[40px] overflow-hidden"
           >
-            <img loading="lazy" className="w-[450px] sm:w-auto" src={img} alt="img-me" />
+            <img loading="eager" className=" hidden md:block w-[360px] sm:w-auto" src={img} alt="img-me" />
           </motion.div>
         </div>
       </div>

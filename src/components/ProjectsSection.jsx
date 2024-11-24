@@ -20,7 +20,7 @@ function ProjectsSection() {
             Projects
           </motion.h2>
         </div>
-        <div className="grid sm:grid-cols-6 grid-cols-1 gap-2 sm:gap-6  rounded-2xl">
+        <div className="grid lg:grid-cols-6 grid-cols-1 gap-2 lg:gap-6  rounded-2xl">
           {PRO.map((projet, index) => (
             <ProjetCard key={index} projet={projet} />
           ))}
@@ -51,10 +51,10 @@ const ProjetCard = ({ projet }) => {
       transition={{ duration: 1, ease: "easeOut" }}
       className={`${
         dark ? "backdrop-blur-sm" : "backdrop-blur-lg bg-transparent "
-      }  transition-all duration-150 flex flex-col justify-between ease-out  sm:col-span-3 rounded-lg mt-2 p-4`}
+      }  transition-all duration-200 flex flex-col justify-between ease-in-out  lg:col-span-3 rounded-lg mt-2 p-4`}
     >
-      <div className="md:p-6 relative m-auto justify-center">
-        {/* <motion.span
+      <div className="md:p-6 relative h-[240px] md:h-auto m-auto justify-center">
+        <motion.div
           whileInView={{
             boxShadow: [
               "0px 0px 0px rgba(0, 0, 0, 0)",
@@ -68,15 +68,15 @@ const ProjetCard = ({ projet }) => {
             repeat: Infinity,
             repeatType: "loop",
           }}
-          className="absulote md:top-0 text-green-500 text-6xl md:text-8xl right-0 bottom-0 left-0 "
-        >
-          .
-        </motion.span> */}
+          className={`absulote z-10 h-3 w-3 md:top-0 ${
+            projet.demo ? "bg-green-500" : "bg-red-500"
+          } rounded-full  text-6xl md:text-8xl right-0 `}
+        ></motion.div>
         <img
-          className="rounded-md   flex m-auto"
+          className="rounded-md mt-1  flex m-auto"
           loading="lazy"
           width={500}
-          height={400}
+          height={180}
           src={currentImg}
           alt={projet.title}
         />
@@ -85,11 +85,15 @@ const ProjetCard = ({ projet }) => {
           {projet?.image.length > 1 &&
             projet?.image.map((path, index) => {
               return (
-                <div className="w-[80px] ml-1 h-auto sm:w-[100px] sm:h-[100px]">
+                <div
+                  key={index}
+                  className="w-[80px] ml-1 h-auto sm:w-[100px] sm:h-auto overflow-hidden"
+                >
                   <img
                     onClick={() => setCurrentImg(path)}
-                    key={index}
                     src={path}
+                    width={100}
+                    height={100}
                     alt="img"
                     loading="lazy"
                     className={` ${
@@ -112,7 +116,7 @@ const ProjetCard = ({ projet }) => {
           {projet.technologies.map((tech, index) => (
             <span
               key={index}
-              className={`p-2 text-center md:text-[43px] text-[28px] md:text-xl  grid-cols-1 mt-4`}
+              className={`p-2 text-center md:text-[43px] text-[28px] md:text-xl cursor-pointer  grid-cols-1 mt-4`}
             >
               {tech}
             </span>
@@ -127,9 +131,9 @@ const ProjetCard = ({ projet }) => {
           <a
             className={`py-2 rounded-3xl ${
               projet.demo ? "cursor-pointer" : "cursor-none"
-            } bg-primary justify-center primary hover:bg-transparent ${
+            } bg-primary justify-center primary hover:bg-transparent hover:border-primary hover:border ${
               dark
-                ? "text-white hover:text-primary"
+                ? "text-black hover:text-primary"
                 : "text-white hover:text-primary"
             }`}
             href={`${projet.demo ? projet.demo : ""}`}
@@ -138,16 +142,18 @@ const ProjetCard = ({ projet }) => {
             {`${projet.demo ? "Demo" : ""}`}
           </a>
           <a
-            className={`py-2 flex p-9 rounded-3xl  bg-primary ml-4 border  hover:border border-primary hover:bg-transparent ${
+            className={`py-2 flex p-9 rounded-3xl md:justify-center  hover:bg-primary ml-4 border  hover:border border-primary bg-transparent ${
               dark
-                ? "text-white hover:text-primary"
-                : "text-white hover:text-primary"
+                ? "text-primary hover:text-black"
+                : "text-primary hover:text-white"
             }`}
             href={`${projet.repo ? projet.repo : "#"}`}
             target={`${projet.demo ? "_blanck" : ""}`}
           >
-            <span> Code |</span>
-            <SiGithub className="m-auto ml-2" />
+            <span className="flex  justify-center">
+              <span> Code |</span>
+              <SiGithub className="flex m-auto ml-2 " />
+            </span>
           </a>
         </motion.p>
       </div>
