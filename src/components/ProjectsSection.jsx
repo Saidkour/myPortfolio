@@ -59,11 +59,15 @@ const ProjetCard = ({ projet }) => {
             boxShadow: [
               "0px 0px 0px rgba(0, 0, 0, 0)",
               "0px 0px 20px rgba(0, 0, 0, 0.5)",
+              "0px 0px 15px rgba(0, 0, 0, 0.75)",
+              "0px 0px 10px rgba(0, 0, 0, 0.9)",
+              "0px 0px 15px rgba(0, 0, 0, 0.75)",
+              "0px 0px 20px rgba(0, 0, 0, 0.5)",
               "0px 0px 0px rgba(0, 0, 0, 0)",
             ],
           }}
           transition={{
-            duration: 2,
+            duration: 3,
             ease: "linear",
             repeat: Infinity,
             repeatType: "loop",
